@@ -29,12 +29,12 @@ RUN set -x \
 
 FROM build_stage AS bullseye-base
 
-ENV PW_SERVERNAME="New \"${STEAMAPP}\" Server" \
+ENV PW_SERVERNAME="New ${STEAMAPP} Server" \
     PW_PORT=8211 \
     PW_RCONPORT=25575 \
     PW_PW="changeme" \
 	PW_MAXPLAYERS=32 \
-    PW_LOCATION="eu" \
+    PW_LOCATION="de" \
     PW_ADMINPW="changeme"
 
 
