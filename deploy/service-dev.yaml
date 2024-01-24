@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: palworld-server-dev
+spec:
+  selector:
+    app.kubernetes.io/name: palworld-dev
+  ports:
+    - protocol: TCP
+      port: 8211
+      targetPort: 8211
+      nodePort: 30401
+  type: NodePort
+     

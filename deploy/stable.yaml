@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: palworld
+spec:
+  selector:
+    matchLabels:
+      app: palworld
+  replicas: 1
+  revisionHistoryLimit: 3
+  template:
+    metadata:
+      labels:
+        app: palworld
+    spec:
+      containers:
+      - image: jcivitell/palworld:2
+        name: palworld
+        ports:
+        - containerPort: 8211
