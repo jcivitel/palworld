@@ -38,7 +38,7 @@ ENV PW_SERVERNAME="New ${STEAMAPP} Server" \
     PW_ADMINPW="changeme"
 
 
-COPY etc/DefaultPalWorldSettings.ini "${HOMEDIR}/palworld-dedicated/DefaultPalWorldSettings_temp.ini"
+COPY etc/DefaultPalWorldSettings_temp.ini "${HOMEDIR}/palworld-dedicated/DefaultPalWorldSettings_temp.ini"
 	
 # Switch to user
 USER ${USER}
