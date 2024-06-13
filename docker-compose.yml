@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  palworld:
+    image: jcivitell/palworld
+    build:
+      context: .
+      dockerfile: Dockerfile
+      tags:
+      - "jcivitell/palworld:${CIRCLE_BRANCH:-master}"
+      - "jcivitell/palworld:${CIRCLE_TAG:-latest}"
